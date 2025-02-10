@@ -26,7 +26,7 @@ jobs:
       - name: Run backend tests
         run: |
           cd Backend
-          python3 manage.py test
+          python manage.py test
 
       - name: Install frontend dependencies
         run: |
