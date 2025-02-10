@@ -212,7 +212,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
+LOG_DIR = os.path.join(BASE_DIR, 'log')
+os.makedirs(LOG_DIR, exist_ok=True)
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -220,7 +221,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/sain/8th Semester/Dev-Opps/project-bolt-sb1-fvnaramz/project/Backend/log/Debug.log',
+            'filename': os.path.join(LOG_DIR, 'Debug.log'),
         },
     },
     'loggers': {
