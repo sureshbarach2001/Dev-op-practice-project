@@ -24,7 +24,9 @@ jobs:
           pip install -r Backend/requirements.txt
 
       - name: Run backend tests
-        run: python manage.py test
+        run: |
+          cd Backend
+          python3 manage.py test
 
       - name: Install frontend dependencies
         run: |
@@ -35,7 +37,6 @@ jobs:
         run: |
           cd frontend
           npm test -- --watchAll=false
-
 
   build-and-push-docker:
     needs: test       # Run only if tests pass
