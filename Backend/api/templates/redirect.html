@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function redirect() {
+            // Get the deep link from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const deeplink = urlParams.get('deeplink');
+            
+            // Redirect to the deep link
+            window.location.href = deeplink;
+
+            // Fallback after a short delay if deep link doesn't work
+            setTimeout(function() {
+                // If we're still here, deep link didn't work
+                document.getElementById('manual').style.display = 'block';
+            }, 1500);
+        }
+    </script>
+    <style>
+        .container {
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #manual {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+        .link {
+            word-break: break-all;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body onload="redirect()">
+    <div class="container">
+        <h2>Opening Aviato App...</h2>
+        <p>Please wait while we redirect you to the app.</p>
+        
+        <div id="manual">
+            <p>If the app doesn't open automatically, copy and paste this link in your browser:</p>
+            <div class="link">
+                <script>
+                    const params = new URLSearchParams(window.location.search);
+                    document.write(params.get('deeplink'));
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
