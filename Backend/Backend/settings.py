@@ -162,11 +162,11 @@ BASE_URL = 'http://127.0.0.1:8000/'  # Change port if you're using a different o
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DB', 'testdb'),
-        'USER': os.environ.get('POSTGRES_USER', 'testuser'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'testpass'),
-        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
-        'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+        'NAME': 'devop',
+        'USER': 'postgres',
+        'PASSWORD': 'sain',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
