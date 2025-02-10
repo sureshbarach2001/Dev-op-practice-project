@@ -24,7 +24,7 @@ jobs:
           pip install -r Backend/requirements.txt
 
       - name: Run backend tests
-        run: python3 manage.py test
+        run: python manage.py test
 
       - name: Install frontend dependencies
         run: |
