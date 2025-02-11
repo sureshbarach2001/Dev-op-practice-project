@@ -151,7 +151,7 @@ jobs:
       - name: Configure Django environment
         run: |
           export DATABASE_URL=postgres://postgres:sain@localhost:5432/devop
-          export SECRET_KEY=${{ django-insecure-+#fu2#^b_uza*o&-f4ymaer0-$$mtu%d32p$z%q-odph697!4$ }}
+          export SECRET_KEY=${{ secrets.SECRET_KEY }}
 
       - name: Wait for PostgreSQL to be ready
         run: |
