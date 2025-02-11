@@ -48,8 +48,8 @@ jobs:
 
       - name: Configure Django environment
         env:
-          DATABASE_URL: postgres://testuser:testpass@localhost:5432/testdb
-          SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+          DATABASE_URL: postgres://postgres:sain@localhost:5432/devop
+          SECRET_KEY: ${{ django-insecure-+#fu2#^b_uza*o&-f4ymaer0-$$mtu%d32p$z%q-odph697!4$ }}
 
       - name: Run Django migrations
         run: |
