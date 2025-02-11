@@ -204,5 +204,5 @@ jobs:
           file: ./Backend/Dockerfile
           push: true
           tags: |
-            sureshbarach2001/dev-op-practice-project:latest
-            sureshbarach2001/dev-op-practice-project:${{ github.sha }}
+            sainsuresh/dev-op-practice-project:latest
+            sainsuresh/dev-op-practice-project:${{ github.sha }}
