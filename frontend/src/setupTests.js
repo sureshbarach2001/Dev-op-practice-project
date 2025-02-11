@@ -1,8 +1,17 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter } from 'react-router-dom'; // Ensure correct import
 import '@testing-library/jest-dom';
 import Home from './Home';
+
+global.TextEncoder = class {
+    encode(input) {
+        return new Uint8Array(input.length);
+    }
+    decode() {
+        return '';
+    }
+};
 
 test('renders Home component with heading and paragraph', () => {
   render(
